@@ -73,9 +73,6 @@ let init
     | Some ms ->
         Curl.set_connecttimeoutms curl ms;
   end;
-  Curl.set_proxy curl "localhost";
-  Curl.set_proxyport curl 8080;
-  Curl.set_sslverifypeer curl false;
   begin match compress with
       false ->
         Curl.set_encoding curl Curl.CURL_ENCODING_NONE
